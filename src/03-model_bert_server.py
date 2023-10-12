@@ -193,6 +193,7 @@ def plot_confusion_matrix(intent_conf_matrix,ner_conf_matrix):
     plt.title('NER Confusion Matrix')
     plt.tight_layout()
     plt.savefig(os.path.join(root,"confusion_matrix.png"), format='png', dpi=300)
+    #plt.show()
     
 # Plot confusion matrix for intent
 intent_conf_matrix = confusion_matrix(test_df['intent_label'], predicted_intent_labels_test)
