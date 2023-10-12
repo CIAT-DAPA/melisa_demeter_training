@@ -202,3 +202,16 @@ plot_confusion_matrix(intent_conf_matrix,ner_conf_matrix)
 
 demeter_path = os.path.join(root,"demeter_model")
 tf.keras.models.save_model(model,demeter_path)
+
+
+intent_label_encoder_file = os.path.join(root, 'intent_label_encoder.txt')
+with open(intent_label_encoder_file, 'w') as f:
+    for label in label_encoder.classes_:
+        f.write(label + '\n')
+
+# Fit and transform labels for NER entities
+ner_labels = [label for label in tag_map.keys() if label != 'O']
+ner_labels_file = os.path.join(root, 'ner_labels.txt')
+with open(ner_labels_file, 'w') as f:
+    for label in ner_labels:
+        f.write(label + '\n')
