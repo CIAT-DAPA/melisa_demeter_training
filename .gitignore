@@ -164,20 +164,8 @@ src/unittests.py
 
 # Folder to test
 data/
+src/models
+src/logs
+src/results
 #data/*.*
 #!data/readme.md
-
-# TEST FILES
-
-data/local
-test/test_files
-/test/complete_local_test.py
-test/complete_local_test.py
-
-data/chirp.2023.06.01.tif
-data/Temperature-Air-2m-Max-24h_C3S-glob-agric_AgERA5_20230601_final-v1.0.tif
-
-chirp
-chirps
-
-src/aclimate_resampling/test.py
